@@ -1,0 +1,45 @@
+Kleinian and Quasi-Fuchsian Limit Sets
+
+Please visit: https://dhushara.com/DarkHeart/quasif/quasi.htm
+This app is based on the ideas presented in "Depth First C-script Listing in Colour".
+I have done many little things in the process of porting it to the iPad,
+but the credit belongs to the author of that code.
+
+All the slider boxes work the same way:
+* Press and hold to either side of center to affect
+  parameter(s) in specified direction and speed.
+* Double Tap to toggle Fast versus Slow editing.
+  (Red vs Green background color)
+* Triple tap to reset parameter(s).
+
+Note: Single tap on any widget to give it the FOCUS.
+      It will gain a red colored border.
+      Click and drag on the image to apply the movement to the widget.
+      The widgets' Fast vs Slow edit style affects the movements.
+
+Note: Pinch the image for zoom.
+
+A. Generator Group Select
+   The drawing is controlled by up to 8 Generator Groups, with each group
+   containing 4 complex values, labelled A,B,C,D.
+   This selector controls which generator group is affected by the control widgets below.
+
+B. Control Widgets
+   Each generator group has 4 complex parameters, A-D.
+   Each control widget controls the 'real' value via the Xaxis, 'imaginary' via the Yaxis.
+
+C. Active
+   Toggle whether the selected generator group is used.
+
+D. epsilon
+   Control the minimum size of the circles
+
+E. Depth
+   Specify the number of recursive iterations are performed.
+
+F. Dual control widgets.
+   Although it's fun to watch the circles fly around like crazy, I have yet to find a nice,
+   controllable way to alter the drawing.
+   These 'dual widgets' are an experiment: each controls 2 of the main widgets A-D.
+
+G. Launch save/load dialog.

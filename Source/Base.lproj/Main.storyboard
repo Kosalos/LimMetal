@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad10_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LimMetal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="Background" customModule="LimMetal" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UHO-FH-VpP" customClass="LimView" customModule="LimMetal" customModuleProvider="target">
+                                <rect key="frame" x="20" y="20" width="368" height="292"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="mbq-p2-PWB" appends="YES" id="eu0-uk-8fL"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yld-q1-3Hm" customClass="DeltaView" customModule="LimMetal" customModuleProvider="target">
+                                <rect key="frame" x="20" y="653" width="86" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mOH-eq-wDN">
+                                <rect key="frame" x="20" y="606" width="307" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="1"/>
+                                    <segment title="2"/>
+                                    <segment title="3"/>
+                                    <segment title="4"/>
+                                    <segment title="5"/>
+                                    <segment title="6"/>
+                                    <segment title="7"/>
+                                    <segment title="8"/>
+                                </segments>
+                                <connections>
+                                    <action selector="selectChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="NK0-tn-1ra"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L4k-YF-W5t" customClass="DeltaView" customModule="LimMetal" customModuleProvider="target">
+                                <rect key="frame" x="114" y="652" width="86" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DIg-k5-ggs" customClass="DeltaView" customModule="LimMetal" customModuleProvider="target">
+                                <rect key="frame" x="208" y="652" width="86" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gzJ-47-dlH" customClass="DeltaView" customModule="LimMetal" customModuleProvider="target">
+                                <rect key="frame" x="302" y="652" width="86" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V7G-dE-mQv">
+                                <rect key="frame" x="24" y="742" width="39" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ekM-xW-yeA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMs-1K-6QX">
+                                <rect key="frame" x="22" y="780" width="43" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Active"/>
+                                <connections>
+                                    <action selector="activeButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HsF-Ja-q8V"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uty-QX-9Yw" customClass="SliderView" customModule="LimMetal" customModuleProvider="target">
+                                <rect key="frame" x="421" y="703" width="103" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97y-Gi-2zy">
+                                <rect key="frame" x="23" y="816" width="72" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Save/Load"/>
+                                <connections>
+                                    <segue destination="H1L-uJ-nhp" kind="popoverPresentation" popoverAnchorView="97y-Gi-2zy" id="1ls-m4-FI5">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoDark" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mMe-Qa-p5X">
+                                <rect key="frame" x="35" y="858" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="xNq-7H-EXO" kind="popoverPresentation" popoverAnchorView="mMe-Qa-p5X" id="veY-SE-Eqa">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aft-rF-p1w">
+                                <rect key="frame" x="178" y="766" width="307" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="2"/>
+                                    <segment title="3"/>
+                                    <segment title="4"/>
+                                    <segment title="5"/>
+                                    <segment title="7"/>
+                                    <segment title="10"/>
+                                </segments>
+                                <connections>
+                                    <action selector="depthChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="Hk3-dC-9Rq"/>
+                                </connections>
+                            </segmentedControl>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lcA-52-w0A" customClass="DeltaView" customModule="LimMetal" customModuleProvider="target">
+                                <rect key="frame" x="603" y="168" width="90" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KlN-dN-aEv" customClass="DeltaView" customModule="LimMetal" customModuleProvider="target">
+                                <rect key="frame" x="603" y="236" width="90" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SrU-K8-uSw" customClass="DeltaView" customModule="LimMetal" customModuleProvider="target">
+                                <rect key="frame" x="603" y="307" width="90" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bA1-Fn-b3U" customClass="DeltaView" customModule="LimMetal" customModuleProvider="target">
+                                <rect key="frame" x="603" y="375" width="90" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="activeButton" destination="UMs-1K-6QX" id="qVh-Fk-XRT"/>
+                        <outlet property="depthSelect" destination="aft-rF-p1w" id="eqi-2X-zV7"/>
+                        <outlet property="genA" destination="Yld-q1-3Hm" id="KNu-GZ-IdV"/>
+                        <outlet property="genAB" destination="lcA-52-w0A" id="Nto-ZM-M55"/>
+                        <outlet property="genAB2" destination="KlN-dN-aEv" id="Azv-LV-Um2"/>
+                        <outlet property="genB" destination="L4k-YF-W5t" id="JuF-BQ-jMU"/>
+                        <outlet property="genC" destination="DIg-k5-ggs" id="ftu-MV-2zf"/>
+                        <outlet property="genCD" destination="SrU-K8-uSw" id="Cfv-Ot-zoK"/>
+                        <outlet property="genCD2" destination="bA1-Fn-b3U" id="gTG-1t-uiR"/>
+                        <outlet property="genD" destination="gzJ-47-dlH" id="2ZD-uK-PCy"/>
+                        <outlet property="genSelect" destination="mOH-eq-wDN" id="IuI-ZG-Dff"/>
+                        <outlet property="helpButton" destination="mMe-Qa-p5X" id="OzE-iK-iKJ"/>
+                        <outlet property="limView" destination="UHO-FH-VpP" id="ZJi-ad-zoY"/>
+                        <outlet property="resetButton" destination="V7G-dE-mQv" id="x3D-3H-IRQ"/>
+                        <outlet property="sEpi" destination="Uty-QX-9Yw" id="h6Y-Gn-p9E"/>
+                        <outlet property="saveLoadButton" destination="97y-Gi-2zy" id="3en-z2-nJ7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <pinchGestureRecognizer id="mbq-p2-PWB">
+                    <connections>
+                        <action selector="pinchGesture:" destination="BYZ-38-t0r" id="LO7-Lu-rMb"/>
+                    </connections>
+                </pinchGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-292.08633093525179" y="11.870503597122303"/>
+        </scene>
+        <!--SaveLoadVC-->
+        <scene sceneID="k5d-oy-Wjv">
+            <objects>
+                <viewController title="KeypadVC" id="H1L-uJ-nhp" userLabel="SaveLoadVC" customClass="SaveLoadViewController" customModule="LimMetal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="urT-1w-odo"/>
+                        <viewControllerLayoutGuide type="bottom" id="MEq-eV-dgX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="left" id="9ER-zl-GwU">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="58" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aM3-LU-J5t">
+                                <rect key="frame" x="14" y="28" width="373" height="564"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SLCell" rowHeight="58" id="YoQ-BE-ibm" customClass="SaveLoadCell" customModule="LimMetal" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="373" height="58"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YoQ-BE-ibm" id="JqM-7C-X85">
+                                            <rect key="frame" x="0.0" y="0.0" width="373" height="57.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xau-oU-OAU">
+                                                    <rect key="frame" x="9" y="6" width="287" height="41"/>
+                                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="287" id="ZRf-gE-ofc"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Load">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="buttonTapped:" destination="YoQ-BE-ibm" eventType="touchUpInside" id="yUn-Qo-4r0"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XyP-qf-dPq">
+                                                    <rect key="frame" x="304" y="6" width="54" height="41"/>
+                                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="54" id="hK8-Vs-Twp"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Save">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="buttonTapped:" destination="YoQ-BE-ibm" eventType="touchUpInside" id="cfT-ts-Efh"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <constraints>
+                                                <constraint firstItem="XyP-qf-dPq" firstAttribute="leading" secondItem="xau-oU-OAU" secondAttribute="trailing" constant="8" id="2Bf-nU-cTR"/>
+                                                <constraint firstItem="XyP-qf-dPq" firstAttribute="baseline" secondItem="xau-oU-OAU" secondAttribute="firstBaseline" id="51s-Oq-0i0"/>
+                                                <constraint firstItem="xau-oU-OAU" firstAttribute="leading" secondItem="JqM-7C-X85" secondAttribute="leadingMargin" constant="-6" id="83s-BR-mfy"/>
+                                                <constraint firstItem="xau-oU-OAU" firstAttribute="top" secondItem="XyP-qf-dPq" secondAttribute="top" id="Cfu-5G-OQW"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="XyP-qf-dPq" secondAttribute="trailing" id="Utw-Qn-knK"/>
+                                                <constraint firstItem="xau-oU-OAU" firstAttribute="bottom" secondItem="JqM-7C-X85" secondAttribute="bottomMargin" id="eKL-fV-zdu"/>
+                                                <constraint firstItem="xau-oU-OAU" firstAttribute="baseline" secondItem="XyP-qf-dPq" secondAttribute="firstBaseline" id="hxr-kC-KHG"/>
+                                                <constraint firstItem="xau-oU-OAU" firstAttribute="top" secondItem="JqM-7C-X85" secondAttribute="topMargin" constant="-5" id="iMd-WJ-FAG"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="loadCell" destination="xau-oU-OAU" id="zOX-ep-fxE"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="aM3-LU-J5t" firstAttribute="leading" secondItem="VIm-0J-bDe" secondAttribute="leading" constant="14" id="Gfh-Mn-NYw"/>
+                            <constraint firstItem="VIm-0J-bDe" firstAttribute="top" secondItem="aM3-LU-J5t" secondAttribute="top" constant="-8" id="edB-o6-fcf"/>
+                            <constraint firstItem="VIm-0J-bDe" firstAttribute="trailing" secondItem="aM3-LU-J5t" secondAttribute="trailing" constant="13" id="r89-3e-O93"/>
+                            <constraint firstItem="VIm-0J-bDe" firstAttribute="bottom" secondItem="aM3-LU-J5t" secondAttribute="bottom" constant="8" id="yny-7n-uqa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VIm-0J-bDe"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="400" height="600"/>
+                    <size key="freeformSize" width="400" height="600"/>
+                    <connections>
+                        <outlet property="tableView" destination="aM3-LU-J5t" id="vYi-U5-mJz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Vv-os-Krk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="512" y="292"/>
+        </scene>
+        <!--Help View Controller-->
+        <scene sceneID="W8E-U9-uE7">
+            <objects>
+                <viewController id="xNq-7H-EXO" customClass="HelpViewController" customModule="LimMetal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dlH-Uw-zdl"/>
+                        <viewControllerLayoutGuide type="bottom" id="BZ9-a1-tGh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="left" id="8YS-xh-6fJ">
+                        <rect key="frame" x="0.0" y="0.0" width="640" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="help" translatesAutoresizingMaskIntoConstraints="NO" id="Tin-2D-YyR">
+                                <rect key="frame" x="35" y="28" width="562" height="155"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="155" id="e8W-gU-8ha"/>
+                                </constraints>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbJ-cj-6VK">
+                                <rect key="frame" x="21" y="191" width="599" height="389"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" staticText="YES"/>
+                        </accessibility>
+                        <constraints>
+                            <constraint firstItem="nbJ-cj-6VK" firstAttribute="leading" secondItem="605-nX-iBO" secondAttribute="leading" constant="21" id="JO4-UT-p9F"/>
+                            <constraint firstItem="Tin-2D-YyR" firstAttribute="top" secondItem="605-nX-iBO" secondAttribute="top" constant="8" id="UHG-1F-jf4"/>
+                            <constraint firstItem="605-nX-iBO" firstAttribute="trailing" secondItem="nbJ-cj-6VK" secondAttribute="trailing" constant="20" id="bCM-gL-buO"/>
+                            <constraint firstItem="nbJ-cj-6VK" firstAttribute="top" secondItem="Tin-2D-YyR" secondAttribute="bottom" constant="8" id="e2O-Cw-E0d"/>
+                            <constraint firstItem="Tin-2D-YyR" firstAttribute="leading" secondItem="605-nX-iBO" secondAttribute="leading" constant="35" id="iXl-2D-vbo"/>
+                            <constraint firstItem="605-nX-iBO" firstAttribute="trailing" secondItem="Tin-2D-YyR" secondAttribute="trailing" constant="43" id="vEf-FD-apG"/>
+                            <constraint firstItem="605-nX-iBO" firstAttribute="bottom" secondItem="nbJ-cj-6VK" secondAttribute="bottom" constant="20" id="z9f-js-mJ0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="605-nX-iBO"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="640" height="600"/>
+                    <size key="freeformSize" width="640" height="600"/>
+                    <connections>
+                        <outlet property="textView" destination="nbJ-cj-6VK" id="5Yn-kq-sJl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mA3-35-ZcN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="467.6258992805756" y="-58.273381294964032"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="help" width="1498" height="302"/>
+    </resources>
+</document>
