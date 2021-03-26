@@ -4,6 +4,18 @@ import simd
 
 var context : CGContext?
 
+extension UIImage {
+    class func imageWithColor(_ color: UIColor, _ sz:CGFloat) -> UIImage {
+    let rect: CGRect = CGRect(x: 0, y: 0, width: sz, height: sz)
+    UIGraphicsBeginImageContextWithOptions(CGSize(width:sz, height:sz), false, 0)
+    color.setFill()
+    UIRectFill(rect)
+    let image: UIImage? = UIGraphicsGetImageFromCurrentImageContext()
+    UIGraphicsEndImageContext()
+    return image!
+  }
+}
+
 class LimView: UIImageView
 {
     var circleImage:UIImage! = nil
@@ -22,8 +34,9 @@ class LimView: UIImageView
         super.init(coder: decoder)
         gDevice = MTLCreateSystemDefaultDevice()
 
-        circleImage = UIColor.black.image(CGSize(width: 1024/2, height: 1024/2))
-
+//        circleImage = UIColor.black.image(CGSize(width: 1024/2, height: 1024/2))
+        circleImage = UIImage.imageWithColor(UIColor.black, 512.0)
+            
         commandQueue = gDevice.makeCommandQueue()!
         fBuffer = gDevice?.makeBuffer(length:MemoryLayout<FinalCircles>.stride, options:.storageModeShared)
         cBuffer = gDevice?.makeBuffer(length:MemoryLayout<Control>.stride, options:.storageModeShared)
@@ -95,44 +108,7 @@ class LimView: UIImageView
     override func draw(_ rect: CGRect) {
         UIColor.blue.setFill()
         UIBezierPath(rect:rect).fill()
-        
-//        ccenter.x = rect.size.width/2
-//        ccenter.y = rect.size.height/2
-//
-//        context = UIGraphicsGetCurrentContext()
-//        
-//        limGenerate(&control,&finalCircles)
-//        
-//        count = finalCircles.nfinal
-//
-//        context!.setStrokeColor(UIColor.white.cgColor)
-//
-//        for i in 0 ..< count {
-//            let ii = Int32(i)
-//            
-//            Objective_CPP().circleData(&finalCircles, ii, &x,&y,&r)
-//            
-//           // Swift.print(String(format:"%3d: %8.5f, %8.5f   %8.5f",i,x,y,r))
-//            drawCircle(x,y,r)
-//        }
     }
-
-//    func drawQuartzCircle(_ context:CGContext, _ center:CGPoint, _ radius:CGFloat) {
-//        let diameter = radius * 2
-//        
-//        context.beginPath()
-//        context.addEllipse(in: CGRect(x:CGFloat(center.x - radius), y:CGFloat(center.y - radius), width:CGFloat(diameter), height:CGFloat(diameter)))
-//        context.strokePath()
-//    }
-//
-//    func drawCircle(_ x:Float, _ y:Float, _ r:Float) {
-//        let cgScale = CGFloat(control.scale)
-//        let xx = ccenter.x + CGFloat(x) * cgScale
-//        let yy = ccenter.y + CGFloat(y) * cgScale
-//        let rr = CGFloat(r) * cgScale
-//  
-//        drawQuartzCircle(context!, CGPoint(x:xx, y:yy), rr)
-//    }
     
     var pt = CGPoint()
     

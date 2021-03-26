@@ -1,6 +1,6 @@
 #include <metal_stdlib>
 #include <simd/simd.h>
-#include "Source/Lim.h"
+#include "Lim.h"
 
 using namespace metal;
 
